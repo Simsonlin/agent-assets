@@ -1,0 +1,52 @@
+standard:
+  id: sdd-contract-standard
+  version: 1
+  language: zh-CN
+
+adoptionTemplate: templates/adoption.md
+
+profiles:
+  quick-change:
+    persistence: spec-first
+    requiredTemplates:
+      - templates/quick-change/change.md
+      - templates/quick-change/tasks.md
+    conditionalTemplates:
+      - templates/modules/adr/decision.md
+      - templates/modules/contract-first/contract-delta.md
+
+  living-spec:
+    persistence: spec-anchored
+    requiredTemplates:
+      - templates/living-spec/capability-spec.md
+      - templates/living-spec/proposal.md
+      - templates/living-spec/spec-delta.md
+      - templates/living-spec/tasks.md
+    conditionalTemplates:
+      - templates/living-spec/design.md
+      - templates/living-spec/verification.md
+      - templates/modules/adr/decision.md
+      - templates/modules/contract-first/contract-delta.md
+
+  governed-delivery:
+    persistence: spec-anchored
+    requiredTemplates:
+      - templates/governed-delivery/capability-spec.md
+      - templates/governed-delivery/proposal.md
+      - templates/governed-delivery/spec-delta.md
+      - templates/governed-delivery/tasks.md
+      - templates/governed-delivery/verification-plan.md
+      - templates/governed-delivery/release-decision.md
+    conditionalTemplates:
+      - templates/governed-delivery/design.md
+      - templates/governed-delivery/migration-rollback.md
+      - templates/modules/adr/decision.md
+      - templates/modules/contract-first/contract-delta.md
+
+modules:
+  adr:
+    template: templates/modules/adr/decision.md
+  contract-first:
+    templates:
+      - templates/modules/contract-first/contract-record.md
+      - templates/modules/contract-first/contract-delta.md

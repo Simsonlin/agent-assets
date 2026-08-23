@@ -1,0 +1,36 @@
+---
+standard: sdd-contract-standard
+standardVersion: 1
+profile: living-spec
+persistence: spec-anchored
+modules: []
+adoptedAt: YYYY-MM-DD
+---
+
+# SDD Adoption
+
+## 采用理由
+
+<!-- 为什么当前 Profile 和模块适合本项目。 -->
+
+## 项目目录映射
+
+<!-- 若未使用推荐目录，记录实际位置。 -->
+
+## Overrides
+
+<!-- 普通模板或流程调整；没有则写 none。 -->
+
+## Core deviations
+
+<!-- 违反核心不变量时说明理由、风险和退出条件；没有则写 none。 -->
+
+## 重新评估触发条件
+
+<!-- 例如新增独立消费者、公开兼容承诺、正式发布门禁。 -->
+
+## Adoption history
+
+| 日期 | Profile/模块变化 | 原因 | 决策链接 |
+|---|---|---|---|
+| YYYY-MM-DD | 初始采用 |  |  |
