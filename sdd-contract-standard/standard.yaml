@@ -5,6 +5,20 @@ standard:
 
 adoptionTemplate: templates/adoption.md
 
+agent:
+  entrypoint: guide/agent-adoption.md
+  requiredReads:
+    - standard.yaml
+    - reference/core-principles.md
+    - reference/artifact-authority.md
+    - reference/profiles.md
+    - reference/lifecycle.md
+    - reference/contracts.md
+    - guide/choose-profile.md
+    - guide/adopt-sdd.md
+    - templates/adoption.md
+  confirmationRequiredBeforeProjectWrites: true
+
 profiles:
   quick-change:
     persistence: spec-first
@@ -50,3 +64,9 @@ modules:
     templates:
       - templates/modules/contract-first/contract-record.md
       - templates/modules/contract-first/contract-delta.md
+
+examples:
+  - id: html-to-design-penpot
+    path: examples/html-to-design-penpot/README.md
+    sourceRepository: html-to-design-penpot
+    sourceCommit: ca8b897

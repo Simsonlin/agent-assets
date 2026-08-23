@@ -58,7 +58,7 @@
 
 ## 当前局限
 
-- 首版只提供人工选择与复制，没有自动验证或升级工具。
-- 模板质量需要通过真实项目采用验证；第一个项目是 `html-to-design-penpot`。
-- Agent Skill、Multi-repo 和 Compliance Traceability 留待实际需求出现后设计。
+- 当前版本提供 Agent 引导、人工确认与模板复制，但没有自动验证或升级工具。
+- 模板和迁移规则已通过第一个真实项目 `html-to-design-penpot` 验证；精简结果保存在 `examples/`。
+- 专用 Agent Skill、Multi-repo 和 Compliance Traceability 留待实际需求出现后设计；使用本标准不依赖安装 Skill。
 - 本标准不是认证体系；`core deviation` 的目标是暴露风险，不是阻止项目作出有意识的选择。

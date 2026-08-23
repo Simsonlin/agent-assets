@@ -1,5 +1,7 @@
 # 选择 Profile
 
+Agent 应按 [Agent 采用流程](./agent-adoption.md) 先检查项目事实，再使用本页形成可供人类确认的推荐。人类手工选择时使用同一判断顺序。
+
 ## 先选择持久化方式
 
 按以下顺序判断，命中即采用；不要按代码行数或团队人数机械判断。
@@ -34,3 +36,13 @@
 - 启用 Contract-First 不要求立即升级到 Governed；只有发布治理也变严格时才升级 Profile。
 
 项目可以偏离建议，但必须在 `sdd/adoption.md` 记录原因和风险。
+
+## 推荐结果必须说明什么
+
+选择不能只给 Profile 名称。还应同时说明：
+
+- persistence 是 `spec-first` 还是 `spec-anchored`；
+- 启用哪些模块及命中的事实；
+- 必需、条件和明确不创建的产物；
+- Spec、Contract、ADR、实现和验证的权威边界；
+- 需要人类确认的假设与重新评估条件。

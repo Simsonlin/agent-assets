@@ -1,6 +1,8 @@
 ---
 standard: sdd-contract-standard
 standardVersion: 1
+standardSource: repository-url-or-path
+standardRevision: commit-or-snapshot-id
 profile: living-spec
 persistence: spec-anchored
 modules: []
@@ -12,6 +14,8 @@ adoptedAt: YYYY-MM-DD
 ## 采用理由
 
 <!-- 为什么当前 Profile 和模块适合本项目。 -->
+
+<!-- standardSource 与 standardRevision 记录本次读取和复制的标准快照；中央更新不自动覆盖项目选择。 -->
 
 ## 项目目录映射
 
