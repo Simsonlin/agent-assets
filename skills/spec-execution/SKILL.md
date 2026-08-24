@@ -3,7 +3,7 @@ name: spec-execution
 description: Execute an approved software specification through intent-aware subagents, proportional evidence, independent review, bounded repair, and explicit escalation. Use when the user explicitly invokes $spec-execution for implementation after the goal and acceptance criteria are sufficiently defined.
 disable-model-invocation: true
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Spec Execution
@@ -17,7 +17,7 @@ Invocation authorizes the implementation/review subagent workflow. It does not a
 1. Identify the semantic task contract: goal, scope, acceptance criteria, constraints, execution intent, required evidence, unavailable verification, and acceptable residual risks. It may come from SDD artifacts, another spec or issue, or a sufficiently complete prompt.
 2. If the project has adopted an SDD standard, treat its active Spec and change artifacts as authoritative. Do not silently replace them with the prompt.
 3. Read [workflow-core.md](references/workflow-core.md), [intent-routes.md](references/intent-routes.md), and [handoff-contracts.md](references/handoff-contracts.md).
-4. Detect the current harness and read exactly one adapter: [adapter-codex.md](references/adapter-codex.md), [adapter-dsh.md](references/adapter-dsh.md), or [adapter-generic.md](references/adapter-generic.md).
+4. Detect the current harness and read exactly one adapter: [adapter-codex.md](references/adapter-codex.md), [adapter-dsh.md](references/adapter-dsh.md), or [adapter-generic.md](references/adapter-generic.md). Treat a capability as available only when the current invocation path can enforce it; general product support is not sufficient.
 5. Read repository instructions, inspect the working tree, and establish the baseline and task-owned paths before delegating writes.
 
 If `executionIntent` is absent in a legacy task, use `delivery` and disclose that default. Never change the intent yourself. If the stated intent conflicts with the real risk or evidence boundary, stop and recommend a Spec decision.

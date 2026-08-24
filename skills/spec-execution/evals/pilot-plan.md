@@ -17,4 +17,13 @@ Evaluate:
 5. Did repair rounds converge within budget?
 6. Did the workflow avoid wasteful fixtures, tests, repeated full reviews, or unnecessary agents?
 
+Before counting an Assurance pilot as successful, run a capability-conformance case in an isolated disposable fixture:
+
+- confirm the selected reviewer path is actually constrained by a read-only sandbox, rather than only instructed not to write;
+- confirm a harmless attempted workspace write is denied and leaves the fixture unchanged;
+- confirm write-capable external tools are absent or disabled for the reviewer path;
+- confirm the final reviewer uses a fresh session distinct from the implementer and primary reviewer;
+- confirm the adapter can use an explicitly read-only independent Codex session when the active spawn interface cannot select a custom reviewer;
+- confirm the workflow reports `BLOCKED` only when neither enforceable path is callable.
+
 Store only the compact run record. Do not store full conversations, hidden reasoning, or copies of product code.

@@ -69,4 +69,4 @@ Pass stable finding IDs, required outcomes, owned paths, and remaining budget. T
 
 ## Main-agent closeout
 
-Record only decision-useful state: intent/route, agents and rounds, blockers and closure, evidence, double status, user overrides, and any wasteful fixture/test work observed. Do not retain full conversations or chain-of-thought as workflow telemetry.
+Record only decision-useful state: intent/route, agents and rounds, reviewer restriction mechanism and session identity, blockers and closure, evidence, double status, user overrides, and any wasteful fixture/test work observed. Do not retain full conversations or chain-of-thought as workflow telemetry.

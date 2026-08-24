@@ -16,7 +16,7 @@ Before creating a writer:
 1. Resolve the task contract and execution intent.
 2. Classify the task as simple or standard. Use the assurance route whenever the intent or risk requires it.
 3. Capture repository instructions, relevant baseline behavior, working-tree state, and task-owned paths.
-4. Negotiate harness capabilities: fresh context, write restriction, structured output, continuable agent, model selection, and workspace isolation.
+4. Negotiate harness capabilities: fresh context, write restriction, structured output, continuable agent, model selection, and workspace isolation. Verify hard requirements against the invocation path available in the current run; do not infer them from product-level capability alone.
 5. Select feasible evidence. Mark third-party or human-only checks as unavailable to the agent rather than manufacturing substitutes.
 
 A task is simple only when its goal and acceptance criteria are clear, the change is local and reversible, ownership is unambiguous, evidence is cheap, impact is low, and it does not alter a contract, security boundary, persistent data, or migration path.
@@ -90,7 +90,7 @@ The Spec may override the budget. Budget exhaustion means report the remaining b
 
 A lightweight Probe review still checks goal alignment, evidence fidelity, and material blockers. It does not expand into unrelated architecture surveys, speculative hardening, or hygiene work.
 
-A fresh reviewer is a separate agent or session that did not participate in product-code writes. Give it the authoritative task contract, baseline, final relevant change, evidence, and any findings it must close—not the implementer's process narrative or hidden reasoning.
+A fresh reviewer is a separate agent or session that did not participate in product-code writes. A harness-specific adapter may satisfy this through a delegated subagent or a separately launched agent session when both preserve the required independence and restriction. Give it the authoritative task contract, baseline, final relevant change, evidence, and any findings it must close—not the implementer's process narrative or hidden reasoning.
 
 Review the whole goal and relevant final change on the first review. Closure review may focus on repairs and their interaction with the previously reviewed change, but must expand when a repair changes surrounding assumptions.
 

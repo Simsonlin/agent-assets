@@ -9,6 +9,10 @@ agents:
   implementers: 0
   reviewers: 0
   fixers: 0
+reviewRestriction:
+  mechanism: custom-agent-read-only | independent-session-read-only | prompt-only-downgrade | unavailable
+  primaryReviewerSession: ""
+  finalReviewerSession: ""
 rounds: 0
 elapsedTime: unavailable
 tokens: unavailable

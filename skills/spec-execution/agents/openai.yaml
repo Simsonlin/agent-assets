@@ -1,6 +1,0 @@
-interface:
-  display_name: "Spec Execution"
-  short_description: "Intent-aware subagent implementation and review"
-  default_prompt: "Use $spec-execution to implement this approved specification with proportional evidence and review."
-policy:
-  allow_implicit_invocation: false
