@@ -1,6 +1,7 @@
 # Tasks
 
 - [ ] 确认 proposal、spec delta 和条件产物
+- [ ] 确认 execution intent、required evidence 与 unavailable verification
 - [ ] 获得实施授权
 - [ ] 实施
 - [ ] 执行并记录验证

@@ -28,6 +28,8 @@ Profile 决定哪些目录需要出现。没有内容时不要创建空目录或
 
 仅在条件命中时复制 design、verification、ADR、contract delta 或 migration/rollback。
 
+每个新 change 同时选择 [Execution Intent](../reference/execution-intent.md)，并填写 Required evidence、Unavailable verification 和 Acceptable residual risks。旧 change 缺失时按 Delivery 解释，不要求为了新增字段批量迁移历史。
+
 新项目不要把计划中的目标能力直接写成已经实现的当前事实。未实现行为进入 proposal/spec delta；capability spec 可以先保持 `draft`，并在 change 完成时合并成为当前行为。
 
 现有项目迁移时先区分：
@@ -68,6 +70,7 @@ ID 使用小写 kebab-case。ADR 使用递增编号。日期只帮助 change 排
 
 - `sdd/adoption.md` 与实际 Profile、模块和目录一致；
 - 每个 change 都声明 `specImpact` 和 `contractImpact`；
+- 每个新 change 声明 `executionIntent` 和证据边界；
 - 条件产物有真实触发原因，不存在空文件；
 - Spec 不复制 Contract 字段，Contract 不复制实现理由；
 - 验证证据、实施授权和发布授权分开；

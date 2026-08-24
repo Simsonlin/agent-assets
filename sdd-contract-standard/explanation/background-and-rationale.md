@@ -43,6 +43,8 @@
 
 当前 Spec 描述系统可观察行为的 WHAT；Contract 描述消费者可依赖的机器边界；Decision 解释 WHY；实现保留 HOW；Verification 保存证据。
 
+Profile 解决产物持久化与治理问题，但不能单独表达一次 change 是快速验证、普通交付还是高保障实现。因此 Execution Intent 作为正交轴加入：Probe、Delivery、Assurance 分别改变证据与复核强度，不复制 Profile 的职责。
+
 这修正了原规则“Spec 只讲 WHY”的过度限制。没有机器边界的能力仍然需要清晰 Spec；存在机器边界时，Spec 引用 Contract 而不复制协议正文。
 
 测试默认只是证据。只有项目明确声明且人类可读的 executable spec/contract，才可以同时承担权威与验证角色。
@@ -60,5 +62,5 @@
 
 - 当前版本提供 Agent 引导、人工确认与模板复制，但没有自动验证或升级工具。
 - 模板和迁移规则已通过第一个真实项目 `html-to-design-penpot` 验证；精简结果保存在 `examples/`。
-- 专用 Agent Skill、Multi-repo 和 Compliance Traceability 留待实际需求出现后设计；使用本标准不依赖安装 Skill。
+- `spec-execution` Skill 可以消费本标准的 change 语义，但仍是独立工程资产；Multi-repo 和 Compliance Traceability 留待实际需求出现后设计，使用本标准不依赖安装 Skill。
 - 本标准不是认证体系；`core deviation` 的目标是暴露风险，不是阻止项目作出有意识的选择。

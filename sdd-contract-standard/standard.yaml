@@ -1,5 +1,6 @@
 standard:
   id: sdd-contract-standard
+  displayName: Adaptive SDD Standard
   version: 1
   language: zh-CN
 
@@ -12,6 +13,7 @@ agent:
     - reference/core-principles.md
     - reference/artifact-authority.md
     - reference/profiles.md
+    - reference/execution-intent.md
     - reference/lifecycle.md
     - reference/contracts.md
     - guide/choose-profile.md
@@ -64,6 +66,16 @@ modules:
     templates:
       - templates/modules/contract-first/contract-record.md
       - templates/modules/contract-first/contract-delta.md
+
+executionIntents:
+  default: delivery
+  values:
+    probe:
+      confidenceTarget: directional
+    delivery:
+      confidenceTarget: reasonable
+    assurance:
+      confidenceTarget: high
 
 examples:
   - id: html-to-design-penpot

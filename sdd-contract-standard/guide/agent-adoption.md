@@ -30,6 +30,7 @@ Agent 必须完整读取 `standard.yaml` 的 `agent.requiredReads`，再按所�
 4. 哪些架构或范围取舍需要多年保留理由，或未来很可能被反复追问？
 5. 哪些验收必须由人完成？验证通过是否与实施、发布授权分开？
 6. 现有文档是迁移、保留为辅助材料，还是已经形成重复真相？
+7. 本次 change 的主要目的，是验证方向、交付可用行为，还是获得高保障结论？哪些验证当前环境不能忠实完成？
 
 不要把模板措辞、目录偏好或不影响结果的小问题都抛给用户。可以提出带假设的推荐，让用户修正。
 
@@ -41,6 +42,7 @@ Agent 必须完整读取 `standard.yaml` 的 `agent.requiredReads`，再按所�
 推荐 Profile：quick-change | living-spec | governed-delivery
 Persistence：spec-first | spec-anchored
 Modules：adr、contract-first 或 none
+Execution Intent：probe | delivery | assurance（按 change 选择）
 
 选择理由：项目事实 → 选择条件
 最小产物：本次必须创建或维护什么
@@ -50,6 +52,7 @@ Modules：adr、contract-first 或 none
 Overrides/Core deviations：none，或风险与退出条件
 重新评估条件：什么事实变化时重新讨论
 待确认假设：仍需人类决定的事项
+证据边界：required evidence、unavailable verification、acceptable residual risks
 ```
 
 推荐规则：
@@ -58,6 +61,8 @@ Overrides/Core deviations：none，或风险与退出条件
 - 正式兼容、多个独立消费者、发布门禁或审计要求命中时选择 Governed。
 - 独立消费者、跨运行边界、持久化格式或兼容承诺命中任一项，Contract-First 为强制模块。
 - ADR 只用于重要、长期、难撤销或会反复被追问的决策。
+- Probe 用于回答方向性问题，Delivery 用于交付可用行为，Assurance 用于高风险逻辑、合同、迁移、安全或门禁；Intent 与 Profile 正交。
+- 旧 change 未声明 Intent 时按 Delivery 解释；Agent 只能建议切换，不能擅自改变。
 - 项目可以选择偏离建议，但违反核心不变量必须登记 `core deviation`，不能伪装成普通 override。
 
 ## 5. 等待人类确认
@@ -73,7 +78,7 @@ Overrides/Core deviations：none，或风险与退出条件
 1. 保留用户已有变更；
 2. 创建 `sdd/adoption.md`，记录标准来源地址、revision、版本、选择、理由、映射、调整和重新评估条件；
 3. 只复制所选 Profile 的必需模板和已命中模块/条件模板；
-4. 每个 change 显式声明 `specImpact` 和 `contractImpact`；
+4. 每个新 change 显式声明 `specImpact`、`contractImpact` 和 `executionIntent`；
 5. Spec 记录当前 WHAT，Contract 记录机器边界，ADR 记录 WHY，验证记录证据；
 6. 优先复用现有 schema、IDL 或类型作为 Contract 权威，不创建等价副本；
 7. 现有项目只迁移仍有价值的历史，不机械复制旧文档；
@@ -89,6 +94,7 @@ Agent 至少检查：
 - `sdd/adoption.md` 与实际目录、Profile 和模块一致；
 - 同一事实没有在 Spec、Contract、文档和测试间形成重复权威；
 - 所有 change 都声明两个 impact；
+- 新 change 声明 execution intent 和证据边界；旧 change 的 Delivery 默认没有被误当成显式选择；
 - 条件产物判断与实际文件一致；
 - 相对链接可达，旧策略没有继续作为第二套现行规则；
 - 未把验证结果写成实施或发布授权；

@@ -3,6 +3,9 @@ changeId: YYYYMMDD-change-id
 status: draft
 verifiedAt: null
 verifiedBy: null
+implementationStatus: INCOMPLETE
+goalStatus: UNCONFIRMED
+probeOutcome: NOT_APPLICABLE
 ---
 
 # Verification
@@ -20,3 +23,7 @@ verifiedBy: null
 |  | pending |  |
 
 ## 未解决项
+
+## Unavailable verification
+
+## Acceptable residual risks

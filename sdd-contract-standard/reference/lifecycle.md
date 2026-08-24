@@ -11,6 +11,9 @@ proposed → approved → in-progress → verifying → completed → archived
 - `completed` 表示验收条件已处理并记录结果。
 - Living/Governed 在归档前必须完成 Spec delta 合并。
 - 状态不编码 PASS/FAIL；结果进入 verification 或任务记录。
+- 完成记录分别保存 Implementation 与 Goal/verification 状态；Probe 另记录假设为 SUPPORTED、REJECTED 或 INCONCLUSIVE。
+- 通常只有 `COMPLETE + CONFIRMED` 才进入 `completed`。如果 Acceptance Criteria 明确把人工验证交接或不确定结论定义为合法终态，也可用 `COMPLETE + READY_FOR_HUMAN_VALIDATION`，或 Probe 的 `INCONCLUSIVE` 完成 change，但必须记录未完成验证和后续责任方。
+- `INCOMPLETE`、`BLOCKED`，以及仍有必需验证待完成的 `UNCONFIRMED` 不得标为 `completed`；继续处理时保持 `in-progress`/`verifying`，放弃时转 `rejected` 并保留原因。
 
 ## Decision
 

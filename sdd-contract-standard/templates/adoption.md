@@ -11,6 +11,8 @@ adoptedAt: YYYY-MM-DD
 
 # SDD Adoption
 
+<!-- 展示名为 Adaptive SDD Standard；兼容 ID 继续使用 sdd-contract-standard。 -->
+
 ## 采用理由
 
 <!-- 为什么当前 Profile 和模块适合本项目。 -->

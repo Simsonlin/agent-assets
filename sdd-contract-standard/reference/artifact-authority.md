@@ -18,6 +18,8 @@
 - Verification 记录观察结果，不重新定义预期行为。
 - 状态字段不表达测试结果；状态和证据分别记录。
 
+Governed change 中，proposal 定义目标和初始证据边界；verification plan 引用它并将证据展开为可执行检查；release decision 只汇总实际结果、偏差和批准例外。发布门禁以 `gate/` 中适用的 required evidence 和 release decision 为权威，不在三个产物中重复改写同一要求。
+
 ## Executable authority 例外
 
 测试默认只是证据。只有同时满足以下条件，才可将人类可读的可执行产物声明为行为 Contract 或 Spec：

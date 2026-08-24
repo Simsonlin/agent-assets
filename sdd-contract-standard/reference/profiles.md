@@ -32,3 +32,5 @@
 | Quick | change、tasks | ADR、contract delta |
 | Living | proposal、spec delta、tasks | design、verification、ADR、contract delta |
 | Governed | proposal、spec delta、tasks、verification plan、release decision | design、ADR、contract delta、migration/rollback |
+
+Profile 不决定单次 change 的执行强度。完成 Profile 选择后，按 [Execution Intent](./execution-intent.md) 为 change 选择 Probe、Delivery 或 Assurance。

@@ -1,4 +1,4 @@
-# SDD Contract Standard
+# Adaptive SDD Standard
 
 这是一个可由人或 Agent 读取、讨论并复制到项目中的 SDD 采用 Playbook。它不要求所有项目使用同一套重流程；它帮助项目根据歧义、影响、可逆性和治理要求选择合适的 Profile 与模块。
 
@@ -8,7 +8,7 @@
 
 把下面这段话连同本仓库地址交给 Agent：
 
-> 阅读这个 SDD Contract Standard 仓库的 `README.md`，按照其中的 Agent 采用流程检查我的项目并与我讨论推荐的 Profile、Persistence 和 Modules。先给出建议、理由、最小产物集和不创建的产物；在我明确确认方案前不要修改项目。确认后再按标准最小落地。
+> 阅读这个 Adaptive SDD Standard 仓库的 `README.md`，按照其中的 Agent 采用流程检查我的项目并与我讨论推荐的 Profile、Persistence 和 Modules。先给出建议、理由、最小产物集和不创建的产物；在我明确确认方案前不要修改项目。确认后再按标准最小落地。
 
 Agent 会按 [Agent 采用流程](./guide/agent-adoption.md) 执行：
 
@@ -32,6 +32,8 @@ Agent 会按 [Agent 采用流程](./guide/agent-adoption.md) 执行：
 
 模块独立判断：真实机器边界命中条件时启用 **Contract-First**；重要、长期且可能被反复追问的取舍启用 **ADR**。
 
+每个 change 还应独立选择 **Execution Intent**：快速验证想法使用 **Probe**，交付可用行为使用 **Delivery**，高风险系统逻辑、合同或门禁使用 **Assurance**。Intent 决定实施与证据强度，不改变 Profile 的持久化和治理职责；旧 change 未声明时按 Delivery 处理。
+
 ## 手工采用
 
 不使用 Agent 时，先阅读 [选择 Profile](./guide/choose-profile.md)，再按 [采用指南](./guide/adopt-sdd.md) 落地。所有采用方式都必须创建 `sdd/adoption.md`，并且不得为了目录完整而创建空的条件产物。
@@ -49,4 +51,4 @@ Agent 会按 [Agent 采用流程](./guide/agent-adoption.md) 执行：
 
 ## 标准边界
 
-当前版本支持 Agent 引导、人工确认和模板复制，不提供 CLI、模板生成器、自动升级或复杂验证器，也不要求安装专用 Skill。标准使用整数版本；只有不兼容的产物名称、字段或生命周期变化才升级版本。
+当前版本支持 Agent 引导、人工确认和模板复制，不提供 CLI、模板生成器、自动升级或复杂验证器，也不要求安装专用 Skill。`spec-execution` Skill 可以消费本标准产物，但两者保持独立：标准定义语义契约，Skill 定义执行工作流。标准使用整数版本；只有不兼容的产物名称、字段或生命周期变化才升级版本。

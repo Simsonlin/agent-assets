@@ -15,10 +15,12 @@
 ## 其他原则
 
 - 流程强度按歧义、影响和可逆性选择，不按项目大小机械选择。
+- 每个 change 的执行与证据强度按 Probe、Delivery 或 Assurance Intent 选择；Intent 与 Profile 正交，旧 change 默认 Delivery。
 - 当前 Spec 描述当前行为，不混入历史过程；历史留在 archived change 和 ADR。
 - 测试默认是证据，不是行为权威。只有明确声明、可读且被项目提升为 executable contract/spec 的测试才能同时承担权威和验证角色。
 - 不创建没有内容的条件产物。
 - 人工验证是合法证据；是否自动化由风险和重复成本决定。
+- fixture、mock 和新增测试必须有明确证据价值；不能用合成验证替代真实第三方或人工边界。
 - 标准应被项目复制为快照采用，中央更新不静默覆盖项目调整。
 
 ## 标准自身版本

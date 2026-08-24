@@ -1,6 +1,7 @@
 # Tasks
 
 - [ ] 确认 proposal、delta、verification plan 和条件产物
+- [ ] 确认 execution intent、证据边界和可接受残余风险
 - [ ] 获得实施授权
 - [ ] 实施及迁移准备
 - [ ] 执行 verification plan 并保存证据

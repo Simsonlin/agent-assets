@@ -37,6 +37,16 @@ Agent 应按 [Agent 采用流程](./agent-adoption.md) 先检查项目事实，�
 
 项目可以偏离建议，但必须在 `sdd/adoption.md` 记录原因和风险。
 
+## 最后为 change 选择 Execution Intent
+
+Profile 确定后，再按本次 change 的目标选择 [Execution Intent](../reference/execution-intent.md)：
+
+- 需要用最小真实路径回答“这个想法是否成立”时选择 Probe；
+- 需要交付可用行为并获得合理信心时选择 Delivery；
+- 涉及高风险系统逻辑、合同、迁移、安全、数据或发布门禁时选择 Assurance。
+
+Intent 不改变 Profile，也不自动授权发布。无法忠实执行的第三方或人工验证应进入 `unavailable verification`，而不是通过 fixture 伪造完成。
+
 ## 推荐结果必须说明什么
 
 选择不能只给 Profile 名称。还应同时说明：
@@ -46,3 +56,4 @@ Agent 应按 [Agent 采用流程](./agent-adoption.md) 先检查项目事实，�
 - 必需、条件和明确不创建的产物；
 - Spec、Contract、ADR、实现和验证的权威边界；
 - 需要人类确认的假设与重新评估条件。
+- change 的 Execution Intent、Required evidence、Unavailable verification 和 Acceptable residual risks。
