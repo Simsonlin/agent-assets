@@ -1,7 +1,7 @@
 ---
-standard: sdd-contract-standard
+standard: adaptive-sdd-standard
 standardVersion: 1
-standardSource: engineering-assets/sdd-contract-standard
+standardSource: engineering-assets/adaptive-sdd-standard
 standardRevision: 7d21795
 profile: living-spec
 persistence: spec-anchored

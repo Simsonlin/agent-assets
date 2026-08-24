@@ -1,5 +1,5 @@
 ---
-standard: sdd-contract-standard
+standard: adaptive-sdd-standard
 standardVersion: 1
 standardSource: repository-url-or-path
 standardRevision: commit-or-snapshot-id
@@ -11,7 +11,7 @@ adoptedAt: YYYY-MM-DD
 
 # SDD Adoption
 
-<!-- 展示名为 Adaptive SDD Standard；兼容 ID 继续使用 sdd-contract-standard。 -->
+<!-- 标准 ID 与展示名统一为 adaptive-sdd-standard / Adaptive SDD Standard。 -->
 
 ## 采用理由
 
