@@ -13,10 +13,10 @@ Process compliance is not success when the result misses the goal.
 
 Before creating a writer:
 
-1. Resolve the task contract and execution intent.
-2. Classify the task as simple or standard. Use the assurance route whenever the intent or risk requires it.
+1. Resolve the task contract, declared `executionIntent`, and `capabilityFallback` (`continue` unless explicitly `block`).
+2. Determine the `effectiveExecutionIntent`. Start with the declared intent; apply the capability-downgrade policy before selecting the simple, standard, or assurance route.
 3. Capture repository instructions, relevant baseline behavior, working-tree state, and task-owned paths.
-4. Negotiate harness capabilities: fresh context, write restriction, structured output, continuable agent, model selection, and workspace isolation. Verify hard requirements against the invocation path available in the current run; do not infer them from product-level capability alone.
+4. Negotiate harness capabilities: implementation delegation, independent review delegation, fresh context, write restriction, structured output, continuable agent, model selection, and workspace isolation. Verify capabilities against the invocation path available in the current run; do not infer them from product-level capability alone.
 5. Select feasible evidence. Mark third-party or human-only checks as unavailable to the agent rather than manufacturing substitutes.
 
 A task is simple only when its goal and acceptance criteria are clear, the change is local and reversible, ownership is unambiguous, evidence is cheap, impact is low, and it does not alter a contract, security boundary, persistent data, or migration path.
@@ -53,7 +53,7 @@ FINAL_CLOSURE_REVIEW
 
 The reviewer classifies findings and recommends a route. The main agent applies the routing policy; the reviewer does not control the workflow.
 
-An Assurance-route task always reaches `FRESH_FINAL_REVIEW`, including when the primary reviewer passes without findings. Selecting that route because of risk does not change `executionIntent`. Repair budget remains governed by the declared intent unless the task contract explicitly overrides it. Findings from the final reviewer may use the remaining budget; that final reviewer closes its own findings. A closure result of `OPEN` never transitions directly to close. A `SUPERSEDED` finding must point to its replacement, whose blocking state controls the transition.
+An effective Assurance-route task always reaches `FRESH_FINAL_REVIEW`, including when the primary reviewer passes without findings. A capability downgrade does not change the declared `executionIntent`, but it may lower the effective intent and therefore select the Delivery topology instead. Repair budget remains governed by the declared intent unless the task contract explicitly overrides it. Findings from the final reviewer may use the remaining budget; that final reviewer closes its own findings. A closure result of `OPEN` never transitions directly to close. A `SUPERSEDED` finding must point to its replacement, whose blocking state controls the transition.
 
 ## Finding classes
 
@@ -70,7 +70,7 @@ Batch blocking findings into one repair round when they share a coherent scope.
 
 - Return a localized correction to the current implementer when context is useful and the approach remains sound.
 - Use a new fixer when the repair is broad, requires a different approach, or the current implementation context is anchoring the work in the wrong direction.
-- Stop when repair would change the goal, acceptance criteria, intent, architecture authority, safety boundary, or authorized scope.
+- Stop before a repair would exceed authority, cause an unapproved irreversible or external write, or conflict with a declared safety boundary. Otherwise, report a goal or scope mismatch faithfully and continue only within the approved task contract.
 
 Default repair budgets:
 
@@ -104,8 +104,11 @@ A dirty worktree is acceptable when the baseline and task ownership are clear. S
 
 ## Capability downgrade
 
-Never silently degrade:
+Never silently degrade. Record the declared and effective intent, each missing capability, its impact, and residual risk.
 
-- Probe may continue with a disclosed downgrade when the result can still answer the decision.
-- Delivery may continue only when the missing capability does not create material risk.
-- Assurance blocks when required isolation, review independence, write restriction, or evidence cannot be preserved.
+- The Skill still requires implementation delegation and an independent reviewer. If either is unavailable, the defining workflow cannot run and the result is `BLOCKED`.
+- For a declared Assurance task, unavailable reviewer write restriction, independent final review, necessary workspace isolation, or required agent-performable evidence changes `effectiveExecutionIntent` to `delivery` when `capabilityFallback` is `continue`.
+- A declared Probe or Delivery task continues at its declared effective intent when a non-essential capability is unavailable; disclose the limitation rather than predicting whether it creates material risk.
+- When a required check can only be performed by a person or external system, complete all agent-performable work. Report `READY_FOR_HUMAN_VALIDATION` with the responsible party and next step when that check is the only remaining gap; otherwise report `UNCONFIRMED`.
+- `capabilityFallback: block` preserves fail-closed behavior: when a required capability is unavailable, do not enter implementation and report `BLOCKED`.
+- Stop before—not after—an actual action would exceed authority, cause an unapproved irreversible or external write, or conflict with a declared safety boundary. Do not block merely because such a risk is hypothetical.

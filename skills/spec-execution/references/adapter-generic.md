@@ -17,4 +17,4 @@ Determine whether the harness can provide:
 
 Use semantic roles rather than tool names. If a feature is unavailable, follow the workflow downgrade policy and disclose the limitation. Never simulate an independent reviewer by asking the implementation context to declare itself independent.
 
-If the harness has no subagent or delegation capability, this Skill cannot satisfy its defining workflow. Stop with `BLOCKED` and explain the missing capability rather than implementing product code in the main agent.
+If the harness has no implementation delegation or independent review delegation capability, this Skill cannot satisfy its defining workflow. Stop with `BLOCKED` and explain the missing capability rather than implementing product code in the main agent. A write-capable but independent reviewer remains usable as a disclosed downgrade under workflow-core.

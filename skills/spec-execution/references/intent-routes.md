@@ -1,6 +1,6 @@
 # Intent Routes
 
-`executionIntent` is orthogonal to the SDD Profile. Profile governs persistence and governance; intent governs how one change is implemented and evidenced.
+`executionIntent` is orthogonal to the SDD Profile. Profile governs persistence and governance; intent governs how one change is implemented and evidenced. It is the declared target; a run may record a lower `effectiveExecutionIntent` under the capability-downgrade policy without rewriting that declaration.
 
 ## Probe
 
@@ -29,7 +29,7 @@ Purpose: implement sensitive system logic, contracts, migrations, safety boundar
 - Require traceability from acceptance criteria and contracts to evidence.
 - Exercise failure paths, compatibility, rollback, and fail-closed behavior when relevant.
 - Preserve independent final review.
-- Block rather than silently downgrade when required evidence or isolation is unavailable.
+- When required review isolation, reviewer restriction, or agent-performable evidence is unavailable, apply the workflow-core capability policy. The default is a disclosed Delivery-effective run; `capabilityFallback: block` preserves fail-closed behavior for this Spec.
 
 ## Evidence fields
 
@@ -38,6 +38,7 @@ The task contract should state:
 - `requiredEvidence`: evidence needed for the goal decision.
 - `unavailableVerification`: checks the agent cannot faithfully perform and who or what can perform them.
 - `acceptableResidualRisks`: known risks explicitly accepted for this intent.
+- Optional `capabilityFallback`: `continue` (default) allows an unavailable Assurance capability to lower the effective intent to Delivery; `block` requires fail-closed behavior instead.
 - Optional `confidenceTarget`: an explicit override; otherwise use directional for Probe, reasonable for Delivery, and high for Assurance.
 
 Tests are evidence by default, not authority. Create or modify them for evidence value, not to satisfy a blanket test-count expectation.

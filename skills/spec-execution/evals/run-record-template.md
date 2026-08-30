@@ -4,7 +4,10 @@
 date: YYYY-MM-DD
 taskReference: repository-or-local-reference
 executionIntent: probe | delivery | assurance
+effectiveExecutionIntent: probe | delivery | assurance
+capabilityFallback: continue | block
 route: simple | standard | assurance
+capabilityDegradations: []
 agents:
   implementers: 0
   reviewers: 0
@@ -20,6 +23,9 @@ blockingFindings: []
 findingClosure: []
 implementationStatus: COMPLETE | INCOMPLETE | BLOCKED
 goalStatus: CONFIRMED | READY_FOR_HUMAN_VALIDATION | UNCONFIRMED
+humanValidation:
+  responsibleParty: ""
+  nextStep: ""
 probeOutcome: SUPPORTED | REJECTED | INCONCLUSIVE | NOT_APPLICABLE
 userOverrides: []
 wasteObserved: []

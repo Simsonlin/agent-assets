@@ -46,10 +46,9 @@ Known consequence: the pilot-plan capability-conformance case ("reviewer actuall
 
 ## Degradation
 
-Apply the same Probe/Delivery/Assurance downgrade policy as the workflow core. Record the missing advertised capability and the chosen route. Assurance blocks when required independence, restriction, isolation, or evidence is unavailable.
+Record the missing advertised capability and the reviewer restriction mechanism. Workflow-core, not this adapter, applies the declared `capabilityFallback` and records the effective intent.
 
 DSH-specific routing given the matrix above:
 
-- **Probe**: continue with a disclosed downgrade ("write restriction / isolation unavailable") when the result can still answer the decision.
-- **Delivery**: continue only when the missing capability creates no material risk; disclose that "implementer instructed to touch only owned paths" is a soft constraint, not enforcement.
-- **Assurance**: write restriction and workspace isolation cannot be enforced on this invocation path → block per policy, route through ESCALATE → STOP_AND_REPORT and hand the "whether to relax" decision back to the Spec owner. Never turn the missing enforcement into a synthetic PASS.
+- **Probe and Delivery**: continue with a disclosed downgrade when applicable; "implementer instructed to touch only owned paths" is a soft constraint, not enforcement.
+- **Assurance**: write restriction and workspace isolation cannot be enforced on this invocation path. Record those missing capabilities; workflow-core defaults the effective intent to Delivery unless the task contract declares `capabilityFallback: block`.

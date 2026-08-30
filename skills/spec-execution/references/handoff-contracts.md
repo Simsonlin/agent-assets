@@ -7,7 +7,7 @@ The fixed Markdown forms below are the v0.1 normative semantic protocol. A harne
 Provide:
 
 - task contract and authoritative sources;
-- execution intent and confidence target;
+- declared and effective execution intent, `capabilityFallback`, and confidence target;
 - owned paths and forbidden paths;
 - baseline and existing user changes to preserve;
 - required evidence and unavailable verification;
@@ -69,4 +69,4 @@ Pass stable finding IDs, required outcomes, owned paths, and remaining budget. T
 
 ## Main-agent closeout
 
-Record only decision-useful state: intent/route, agents and rounds, reviewer restriction mechanism and session identity, blockers and closure, evidence, double status, user overrides, and any wasteful fixture/test work observed. Do not retain full conversations or chain-of-thought as workflow telemetry.
+Record only decision-useful state: declared and effective intent, route, capability degradations, agents and rounds, reviewer restriction mechanism and session identity, blockers and closure, evidence, double status, human-validation owner and next step when applicable, user overrides, and any wasteful fixture/test work observed. Do not retain full conversations or chain-of-thought as workflow telemetry.

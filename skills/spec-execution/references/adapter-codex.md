@@ -19,7 +19,7 @@ During preflight, inspect the capabilities actually callable in the current run.
 
 1. A fresh custom reviewer agent whose loaded configuration explicitly sets `sandbox_mode = "read-only"`, when the active delegation interface can select that agent by identity.
 2. A fresh independent Codex session launched with an explicit read-only sandbox, such as a supported non-interactive `codex exec --sandbox read-only --ephemeral` invocation. This is reviewer delegation, not a review performed by the main implementation context.
-3. If neither path is callable, apply the capability-downgrade policy. Assurance blocks; Probe or Delivery may continue only when workflow-core permits it.
+3. If neither path is callable, record `enforced-read-only-reviewer-unavailable` and apply the workflow-core capability-downgrade policy.
 
 Do not infer enforcement from any of the following alone:
 
@@ -46,4 +46,4 @@ Model diversity is optional. Fresh role context and evidence-based review are re
 
 ## Degradation
 
-Disclose unavailable capabilities in the closeout. Assurance must stop if an enforced read-only reviewer, independent final review, necessary isolation, or required evidence cannot be preserved. For Probe and Delivery, a reviewer constrained only by assignment is a disclosed downgrade and may continue only under the workflow-core policy.
+Disclose unavailable capabilities in the closeout. This adapter reports which reviewer restriction path was actually enforceable; workflow-core decides whether the declared intent remains effective, downgrades, or fails closed. A reviewer constrained only by assignment is `prompt-only-downgrade`, not enforced read-only.

@@ -3,7 +3,7 @@ name: spec-execution
 description: Execute an approved software specification through intent-aware subagents, proportional evidence, independent review, bounded repair, and explicit escalation. Use when the user explicitly invokes $spec-execution for implementation after the goal and acceptance criteria are sufficiently defined.
 disable-model-invocation: true
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
 ---
 
 # Spec Execution
@@ -14,13 +14,13 @@ Invocation authorizes the implementation/review subagent workflow. It does not a
 
 ## Load the operating contract
 
-1. Identify the semantic task contract: goal, scope, acceptance criteria, constraints, execution intent, required evidence, unavailable verification, and acceptable residual risks. It may come from SDD artifacts, another spec or issue, or a sufficiently complete prompt.
+1. Identify the semantic task contract: goal, scope, acceptance criteria, constraints, execution intent, `capabilityFallback`, required evidence, unavailable verification, and acceptable residual risks. It may come from SDD artifacts, another spec or issue, or a sufficiently complete prompt.
 2. If the project has adopted an SDD standard, treat its active Spec and change artifacts as authoritative. Do not silently replace them with the prompt.
 3. Read [workflow-core.md](references/workflow-core.md), [intent-routes.md](references/intent-routes.md), and [handoff-contracts.md](references/handoff-contracts.md).
 4. Detect the current harness and read exactly one adapter: [adapter-codex.md](references/adapter-codex.md), [adapter-dsh.md](references/adapter-dsh.md), or [adapter-generic.md](references/adapter-generic.md). Treat a capability as available only when the current invocation path can enforce it; general product support is not sufficient.
 5. Read repository instructions, inspect the working tree, and establish the baseline and task-owned paths before delegating writes.
 
-If `executionIntent` is absent in a legacy task, use `delivery` and disclose that default. Never change the intent yourself. If the stated intent conflicts with the real risk or evidence boundary, stop and recommend a Spec decision.
+If `executionIntent` is absent in a legacy task, use `delivery` and disclose that default. `capabilityFallback` defaults to `continue`; `block` is an explicit fail-closed override. Never change the declared intent yourself, but record a lower `effectiveExecutionIntent` when the capability-downgrade policy applies. Stop only before an action would exceed authority, cause an unapproved irreversible or external write, or conflict with a declared safety boundary.
 
 ## Orchestrate; do not implement
 
@@ -37,6 +37,8 @@ Report both dimensions separately:
 - Implementation: `COMPLETE | INCOMPLETE | BLOCKED`
 - Goal/verification: `CONFIRMED | READY_FOR_HUMAN_VALIDATION | UNCONFIRMED`
 
+Also report the declared `executionIntent`, `effectiveExecutionIntent`, any `capabilityDegradations`, and the resulting residual risks. `CONFIRMED` describes the evidence achieved at the effective intent; it does not imply that an unavailable Assurance control was satisfied.
+
 For a Probe, also report `SUPPORTED | REJECTED | INCONCLUSIVE` for the hypothesis. Never translate unavailable real-world verification into a synthetic PASS.
 
-Stop and report when the goal, acceptance criteria, authority, intent, safety boundary, or implementation strategy requires a decision not already made in the task contract. Do not treat mere technical difficulty as a reason to stop while bounded in-scope progress remains possible.
+Do not stop merely because a review control or verification capability is unavailable. Continue the bounded in-scope work and report the limitation faithfully. Stop and report only when an imminent action would exceed authority, cause an unapproved irreversible or external write, or conflict with a declared safety boundary.
