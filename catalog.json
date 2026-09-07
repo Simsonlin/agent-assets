@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "personal",
+      "type": "owned",
+      "path": ".",
+      "revision": "workspace"
+    },
+    {
+      "id": "matt",
+      "type": "external",
+      "url": "https://github.com/mattpocock/skills",
+      "revision": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "path": "staging/matt/upstream",
+      "checksums": "staging/matt/SHA256SUMS.json"
+    },
+    {
+      "id": "structured",
+      "type": "external",
+      "url": "https://github.com/radarist/structured-analytic-skills.git",
+      "revision": "d503ff5b164a6bed567a9c48214fd0517cad64dd",
+      "path": "staging/structured/upstream",
+      "checksums": "staging/structured/SHA256SUMS.json"
+    },
+    {
+      "id": "latticework",
+      "type": "external",
+      "url": "https://github.com/l4ci/skills.git",
+      "revision": "dbfdca4dd1a0d0348a390732591b2b6f0abf5d70",
+      "path": "staging/latticework/upstream",
+      "checksums": "staging/latticework/SHA256SUMS.json"
+    }
+  ],
+  "assets": [
+    {
+      "id": "personal/grill-me",
+      "name": "grill-me",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "skills/grill-me",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/grilling",
+      "name": "grilling",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "skills/grilling",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/spec-execution",
+      "name": "spec-execution",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "skills/spec-execution",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/wait-what",
+      "name": "wait-what",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "skills/wait-what",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/ask-matt",
+      "name": "ask-matt",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/ask-matt",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/code-review",
+      "name": "code-review",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/code-review",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/codebase-design",
+      "name": "codebase-design",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "testing",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/codebase-design",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/diagnosing-bugs",
+      "name": "diagnosing-bugs",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/diagnosing-bugs",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/domain-modeling",
+      "name": "domain-modeling",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/domain-modeling",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/grill-with-docs",
+      "name": "grill-with-docs",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/grill-with-docs",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "matt/grilling",
+        "matt/domain-modeling"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/implement",
+      "name": "implement",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/implement",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "matt/tdd",
+        "matt/code-review"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/improve-codebase-architecture",
+      "name": "improve-codebase-architecture",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/improve-codebase-architecture",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "matt/codebase-design",
+        "matt/grilling",
+        "matt/domain-modeling"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/prototype",
+      "name": "prototype",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/prototype",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/research",
+      "name": "research",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/research",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/setup-matt-pocock-skills",
+      "name": "setup-matt-pocock-skills",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/setup-matt-pocock-skills",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/tdd",
+      "name": "tdd",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/tdd",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "matt/codebase-design"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/to-spec",
+      "name": "to-spec",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/to-spec",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/to-tickets",
+      "name": "to-tickets",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/to-tickets",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/wayfinder",
+      "name": "wayfinder",
+      "kind": "skill",
+      "domains": [
+        "engineering"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/engineering/wayfinder",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "matt/research",
+        "matt/prototype",
+        "matt/grilling",
+        "matt/domain-modeling"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/grilling",
+      "name": "grilling",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/productivity/grilling",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "matt/handoff",
+      "name": "handoff",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "staged",
+      "source": "matt",
+      "path": "staging/matt/upstream/skills/productivity/handoff",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/adaptive-sdd",
+      "name": "adaptive-sdd",
+      "kind": "standard",
+      "domains": [
+        "engineering"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "adaptive-sdd-standard",
+      "entrypoint": "README.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/asset-intake",
+      "name": "asset-intake",
+      "kind": "workflow",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "workflows",
+      "entrypoint": "intake.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/asset-trial",
+      "name": "asset-trial",
+      "kind": "workflow",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "workflows",
+      "entrypoint": "trial.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/asset-adoption",
+      "name": "asset-adoption",
+      "kind": "workflow",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "workflows",
+      "entrypoint": "adoption.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "personal/asset-manager",
+      "name": "asset-manager",
+      "kind": "tool",
+      "domains": [
+        "general"
+      ],
+      "state": "testing",
+      "source": "personal",
+      "path": "scripts",
+      "entrypoint": "assets.py",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/key-assumptions-check",
+      "name": "key-assumptions-check",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "testing",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/key-assumptions-check",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/analysis-of-competing-hypotheses",
+      "name": "analysis-of-competing-hypotheses",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/analysis-of-competing-hypotheses",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "structured/rate-source-admiralty"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/quality-of-information-check",
+      "name": "quality-of-information-check",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/quality-of-information-check",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "structured/rate-source-admiralty",
+        "structured/sift-source-check",
+        "structured/triangulate-sources",
+        "structured/estimative-language"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/decompose-research-question",
+      "name": "decompose-research-question",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/decompose-research-question",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/rate-source-admiralty",
+      "name": "rate-source-admiralty",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/rate-source-admiralty",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "structured/sift-source-check"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/sift-source-check",
+      "name": "sift-source-check",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/sift-source-check",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/estimative-language",
+      "name": "estimative-language",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/estimative-language",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "structured/triangulate-sources",
+      "name": "triangulate-sources",
+      "kind": "skill",
+      "domains": [
+        "research"
+      ],
+      "state": "staged",
+      "source": "structured",
+      "path": "staging/structured/upstream/skills/triangulate-sources",
+      "entrypoint": "SKILL.md",
+      "dependencies": [
+        "structured/rate-source-admiralty",
+        "structured/sift-source-check"
+      ],
+      "dependency_review": "reviewed"
+    },
+    {
+      "id": "latticework/scqa-pyramid",
+      "name": "scqa-pyramid",
+      "kind": "skill",
+      "domains": [
+        "research",
+        "general"
+      ],
+      "state": "staged",
+      "source": "latticework",
+      "path": "staging/latticework/upstream/plugins/latticework/skills/scqa-pyramid",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed",
+      "runtime_requirements": [
+        "subagents"
+      ],
+      "notes": "完整原版多 Agent 流程；可选相邻方法及宿主限制见 staging/latticework/GUIDE.md。"
+    },
+    {
+      "id": "latticework/strategy-kernel",
+      "name": "strategy-kernel",
+      "kind": "skill",
+      "domains": [
+        "research",
+        "general"
+      ],
+      "state": "staged",
+      "source": "latticework",
+      "path": "staging/latticework/upstream/plugins/latticework/skills/strategy-kernel",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed",
+      "runtime_requirements": [
+        "subagents"
+      ],
+      "notes": "完整原版多 Agent 流程；可选相邻方法及宿主限制见 staging/latticework/GUIDE.md。"
+    },
+    {
+      "id": "latticework/tosca-problem-definition",
+      "name": "tosca-problem-definition",
+      "kind": "skill",
+      "domains": [
+        "research",
+        "general"
+      ],
+      "state": "staged",
+      "source": "latticework",
+      "path": "staging/latticework/upstream/plugins/latticework/skills/tosca-problem-definition",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed",
+      "runtime_requirements": [
+        "subagents"
+      ],
+      "notes": "完整原版多 Agent 流程；可选相邻方法及宿主限制见 staging/latticework/GUIDE.md。"
+    },
+    {
+      "id": "latticework/key-assumptions-check",
+      "name": "key-assumptions-check",
+      "kind": "skill",
+      "domains": [
+        "research",
+        "general"
+      ],
+      "state": "staged",
+      "source": "latticework",
+      "path": "staging/latticework/upstream/plugins/latticework/skills/key-assumptions-check",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed",
+      "runtime_requirements": [
+        "subagents"
+      ],
+      "notes": "完整原版多 Agent 流程；可选相邻方法及宿主限制见 staging/latticework/GUIDE.md。"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "engineering-matt",
+  "description": "独立试用 Matt 工程主线",
+  "assets": [
+    "matt/setup-matt-pocock-skills",
+    "matt/ask-matt",
+    "matt/grill-with-docs",
+    "matt/to-spec",
+    "matt/to-tickets",
+    "matt/implement",
+    "matt/research",
+    "matt/prototype",
+    "matt/handoff"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "20260907-design-codex",
+  "recorded_at": "2026-09-07T04:17:30.735059+00:00",
+  "task": "只读检查预览生成与静态编辑回写之间的模块接口，提出最多两项有代码证据的设计观察；不改项目代码或规格。",
+  "harness": "codex",
+  "project_name": "design-workflow",
+  "outcome": "limited",
+  "note": "完成 Codex 原生发现与调用的只读接口检查；有方法帮助，单次静态分析且未运行复现，不作稳定收益结论。",
+  "evidence": [
+    "trials/20260907-design-codex/observations.md",
+    "trials/20260907-design-codex/native-evidence.json",
+    "trials/20260907-design-codex/report.md"
+  ],
+  "native_discovery": "verified",
+  "native_invocation": "verified",
+  "assets": [
+    {
+      "asset": "matt/codebase-design",
+      "source_revision": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "source_hashes": {
+        "DEEPENING.md": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+        "DESIGN-IT-TWICE.md": "8e740bf98446dbd4dfdc132ac4346d9a7eedaf93de6a495889171cf7f99f16bd",
+        "SKILL.md": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+        "agents/openai.yaml": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f"
+      },
+      "alias": "trial-matt-codebase-design-51ca68",
+      "transformations": [
+        {
+          "path": "SKILL.md",
+          "identifier_replacements": 1
+        }
+      ]
+    }
+  ],
+  "adoption": "not_decided"
+}

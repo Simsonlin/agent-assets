@@ -1,0 +1,7 @@
+{
+  "id": "engineering-exploration",
+  "description": "范围明确的模块和接口设计检查",
+  "assets": [
+    "matt/codebase-design"
+  ]
+}

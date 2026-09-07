@@ -1,0 +1,7 @@
+{
+  "id": "research-assumptions",
+  "description": "核查已有结论的关键假设，不自动开展后续研究",
+  "assets": [
+    "structured/key-assumptions-check"
+  ]
+}

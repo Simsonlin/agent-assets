@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "20260907-research-dsh",
+  "recorded_at": "2026-09-07T04:09:53.065731+00:00",
+  "task": "只读试用关键假设检查：审视 W04 中下发前完成整套准备可减少一线返工的假设，识别隐含前提和验证行动，不修改项目正式判断。",
+  "harness": "dsh",
+  "project_name": "corporate-banking-intelligence",
+  "outcome": "blocked",
+  "note": "用户因 DSH 当前无法启动而要求跳过；完成了文件准备检查与撤销，未验证原生调用或行为效果。",
+  "evidence": [
+    "trials/20260907-research-dsh/observations.md"
+  ],
+  "native_discovery": "unverified",
+  "native_invocation": "unverified",
+  "assets": [
+    {
+      "asset": "structured/key-assumptions-check",
+      "source_revision": "d503ff5b164a6bed567a9c48214fd0517cad64dd",
+      "source_hashes": {
+        "SKILL.md": "618ef463234e4b5796651582170fddb1bdda65b16c3a0ccf126932300e8c0291",
+        "agents/openai.yaml": "0364ead708b1029541ff2dd2cd76babcb86806425afe098f7d6d81bc8bbdce30",
+        "evals/evals.json": "1317c31fd929916a0bc263a6630c3bef40ad2307793402e2d6b139c686496cd8"
+      },
+      "alias": "trial-structured-key-assumptions-check-9af463",
+      "transformations": [
+        {
+          "path": "SKILL.md",
+          "identifier_replacements": 1
+        },
+        {
+          "path": "agents/openai.yaml",
+          "identifier_replacements": 1
+        },
+        {
+          "path": "evals/evals.json",
+          "identifier_replacements": 4
+        }
+      ]
+    }
+  ],
+  "adoption": "not_decided"
+}

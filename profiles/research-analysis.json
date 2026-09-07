@@ -1,0 +1,10 @@
+{
+  "id": "research-analysis",
+  "description": "结构化分析候选组合，按任务选择实际调用的方法",
+  "assets": [
+    "structured/decompose-research-question",
+    "structured/quality-of-information-check",
+    "structured/analysis-of-competing-hypotheses",
+    "structured/key-assumptions-check"
+  ]
+}
