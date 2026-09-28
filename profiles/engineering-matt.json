@@ -1,6 +1,6 @@
 {
   "id": "engineering-matt",
-  "description": "独立试用 Matt 工程主线",
+  "description": "按项目启用 Matt 工程主线",
   "assets": [
     "matt/setup-matt-pocock-skills",
     "matt/ask-matt",

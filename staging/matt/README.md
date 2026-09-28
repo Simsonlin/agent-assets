@@ -1,15 +1,14 @@
-# Matt skills 试用副本
+# Matt skills 固定来源副本
 
-先体验 Matt 的原始研发流程，再根据实际任务决定是否微调。本目录保存 **17 个 skill、完整的各自支持文件和对应上游说明**；上游文件保持原版；已有一次 Codex 只读试用，临时安装已撤销。
+本目录保存 **17 个 skill、完整的各自支持文件和对应上游说明**；上游文件保持原版。项目按实际任务选择需要的技能，不要求先完成试验或安装整套。
 
 固定版本：[`3cca18b368ae95cdbdebbff572ccafa662551015`](https://github.com/mattpocock/skills/commit/3cca18b368ae95cdbdebbff572ccafa662551015)，整理日期：2026-09-06。
 
 ## 从这里开始
 
-1. 通过本仓库的 [统一试用流程](../../workflows/trial.md) 准备指定资产或 Profile，结束后撤销。
+1. 通过本仓库的 [项目启用流程](../../workflows/project-skills.md) 选择指定资产或 Profile，并在目标项目保存副本。
 2. 完整选集见下表；方法与场景背景见 [使用指南](GUIDE.md)。不需要先安装整套才能试单个 Skill。
-3. 当前使用记录统一保存于仓库根目录 [trials](../../trials/README.md)，见 [首次 codebase-design 试用](../../trials/20260907-design-codex/observations.md)。
-4. `upstream/` 表示作者原始文件副本；本层 README、GUIDE 和 SOURCE 为本地管理资料。
+3. `upstream/` 表示作者原始文件副本；本层 README、GUIDE 和 SOURCE 为本地管理资料。
 
 [来源和更新方法](SOURCE.md) · [本地差异](LOCAL-CHANGES.md) · [上游 README](upstream/README.md) · [许可](upstream/LICENSE)
 
@@ -51,5 +50,4 @@
 
 - `upstream/`：作者原文；保持英文、目录关系与调用元数据。
 - 本目录的中文文档：本地推荐和使用解释，不是 Matt 的原始规则。
-- 本目录 `trials/` 仅保留历史专用模板；新试用统一记录在仓库根目录 `trials/`。
-- 本集合独立试用，不要求采用 Adaptive SDD，也没有加入自研编排层。
+- 本集合不要求采用 Adaptive SDD，也没有加入自研编排层。

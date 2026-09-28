@@ -1,29 +1,18 @@
 # 资产工具
 
-在资产仓库运行，依赖 Python 3.10+ 标准库。也可从其他项目用脚本绝对路径调用；--root 只用于指定另一份资产库或测试夹具。
+在资产仓库运行，依赖 Python 3.10+ 标准库。`--root` 仅用于另一份资产库或测试夹具。
 
 ```sh
 python3 scripts/assets.py list
-python3 scripts/assets.py list --domain research
-python3 scripts/assets.py show matt/codebase-design
+python3 scripts/assets.py show matt/implement
 python3 scripts/assets.py check
-python3 scripts/assets.py prepare --project /absolute/project --harness codex --profile engineering-exploration --task '检查一个明确的模块设计问题'
+python3 scripts/assets.py enable --project /absolute/project --harness codex --asset matt/implement
 ```
 
-prepare 默认预览。确定后增加 --apply 执行；可用 --run 固定一个唯一 run ID，重复运行不会覆盖。可用重复 --asset 参数替代或补充 Profile。
+`enable` 默认只预览；核对后加 `--apply`，将选中的完整 Skill 和登记的必需依赖复制到项目目录。可重复 `--asset`，或使用 `--profile <id>` 作为选择起点。Codex 写入 `.agents/skills/`，DSH 写入 `.dsh/skills/`。名称稳定地使用 `<source>-<skill>`；所选技能之间的引用和选择器显示名同步调整，来源文件不变。若目录已存在且内容一致，返回 `already-enabled`；不同则停止，不覆盖。来源目录中的许可和第三方声明也会复制到项目技能目录。
 
-```sh
-python3 scripts/assets.py verify <run-id>
-python3 scripts/assets.py record <run-id> --used matt/codebase-design --outcome limited --note '实际观察与限制' --evidence trials/<run-id>/observations.md
-python3 scripts/assets.py cleanup <run-id>
-```
+项目是否用 Git 跟踪副本由项目决定；本库不自动清理、升级或删除项目文件。启用不会改变 catalog 的成熟状态，也不要求使用记录。项目应在自己的 `AGENTS.md` 说明这些技能适用于哪些任务。
 
-只有真实发现和调用证据充分时才为 record 增加 --discovery verified、--invocation verified。useful 需要已验证调用及存在的证据文件；准备检查可记 inconclusive。record 不覆盖历史条目。
+其他命令：`intake` 接入固定来源，`decide` 根据用户决定更新资产库状态。
 
-试用副本用独立名称，Markdown/YAML/JSON 中所选技能标识符会转换；外部 URL 与非文本资源保留。完整上游目录及调用策略不丢失，清单保存原始/安装后摘要与替换数量。命名转换是试用适配，记录时应说明；不能将“转换后可用”当成所有原版宿主组合都已验证。
-
-verify/cleanup 遇到不一致返回码 2；输入或登记错误返回码 1。cleanup 保护有后续编辑、新增资源、符号链接或不完整写入的目录，并输出待人工检查项。修正为清单原状后可以重试；不要绕过工具批量删除项目技能。
-
-接入与纳入命令见 [intake](../workflows/intake.md)、[adoption](../workflows/adoption.md)。
-
-验证脚本：`python3 -m unittest discover -s tests -v`。测试在临时目录验证文件保护和生命周期，不调用模型或外部服务。
+验证：`python3 -m unittest discover -s tests -v`。测试在临时目录验证来源和文件保护，不调用模型或外部服务。

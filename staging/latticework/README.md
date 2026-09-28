@@ -1,8 +1,8 @@
-# latticework 待试用选集
+# latticework 固定来源选集
 
-来自 l4ci/skills 的 latticework，固定版本 `dbfdca4dd1a0d0348a390732591b2b6f0abf5d70`。当前 4 项均为 staged，尚未试用或正式采用。
+来自 l4ci/skills 的 latticework，固定版本 `dbfdca4dd1a0d0348a390732591b2b6f0abf5d70`。4 项均已登记，可按项目需要启用。
 
-[来源与许可](SOURCE.md) · [试用指南](GUIDE.md) · [与现有选集的比较](../../docs/latticework-assessment.md)
+[来源与许可](SOURCE.md) · [使用指南](GUIDE.md) · [与现有选集的比较](../../docs/latticework-assessment.md)
 
 | 资产 ID | 用途 |
 |---|---|
@@ -15,4 +15,4 @@
 
 可以直接交给 Agent：
 
-> 阅读 agent-assets 的 AGENTS.md，用 latticework/scqa-pyramid 试用以下任务：〈已有结论、支撑材料、读者和期望产物〉。先核对宿主可执行原版多 Agent 流程，再准备、调用、记录并撤销临时配置。
+> 阅读 agent-assets 的 AGENTS.md，在当前项目启用 latticework/scqa-pyramid。先核对宿主能否执行原版多 Agent 流程；列出来源版本、目标路径和需要的资源，不覆盖已有文件。

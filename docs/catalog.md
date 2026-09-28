@@ -6,11 +6,11 @@
 
 每个资产有稳定的 `source/name` ID；`kind` 表示 skill、standard、workflow、template 或 tool；`domains` 是可以扩展的领域标签。`path` 与 `entrypoint` 指向唯一源位置。`source` 连接 URL/commit 或个人工作区来源。
 
-生命周期：`staged` 待试用、`testing` 试用中、`adopted` 用户正式纳入、`deferred` 用户暂缓、`retired` 用户退役。后面三种状态必须关联用户决定记录。testing 不证明已成功完成试点；实际结果在 trials。
+资产库状态：`available` 表示已登记、可按依赖检查结果选择；`adopted` 表示用户决定长期维护；`deferred` 表示暂缓；`retired` 表示退役。项目启用不改变资产库状态，不需要先完成试验。后三种状态必须关联用户决定记录。
 
-`dependencies` 只登记所选运行路线必须准备的其他资产。`dependency_review` 必须为 reviewed 才能试用。可选相邻技能、尚未收录入口、条件分支在来源指南说明；不将全文出现的每个技能都当依赖。
+`dependencies` 只登记所选运行路线必须准备的其他资产。`dependency_review` 必须为 reviewed 才能在项目启用。可选相邻技能、尚未收录入口、条件分支在来源指南说明；不将全文出现的每个技能都当依赖。
 
-`sources[].checksums` 对整个选集固定副本进行校验。个人源码使用工作区版本，每次试用另外记录逐文件摘要。校验和发生变化时，先判断来源更新还是个人特化，不重算旧基线来抹掉差异。
+`sources[].checksums` 对整个选集固定副本进行校验。个人源码使用工作区版本；项目 Git 记录启用副本。校验和发生变化时，先判断来源更新还是个人特化，不重算旧基线来抹掉差异。
 
 ## 个人资产
 

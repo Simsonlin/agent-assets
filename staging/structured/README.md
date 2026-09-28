@@ -2,7 +2,7 @@
 
 来源：[radarist/structured-analytic-skills](https://github.com/radarist/structured-analytic-skills)，固定版本 `d503ff5b164a6bed567a9c48214fd0517cad64dd`。本目录收录该来源的 8 项；latticework 独立保存在 [另一来源目录](../latticework/README.md)。
 
-[来源记录](SOURCE.md) · [试用指南](GUIDE.md) · [统一试用流程](../../workflows/trial.md)
+[来源记录](SOURCE.md) · [使用指南](GUIDE.md) · [项目启用](../../workflows/project-skills.md)
 
 `upstream/` 保存原版文件与许可；本层文件用于导航和管理。
 

@@ -1,6 +1,6 @@
 # Personal Agent Capability Architecture v1
 
-状态：用户已确认目标并于 2026-09-07 要求按阶段实施。实施进度和证据见 [实施记录](../IMPLEMENTATION.md)。
+状态：2026-09-07 的历史方案。一次性试用已不再作为当前操作路径；现行项目选用见 [项目启用](../../workflows/project-skills.md)。当时的一次性试用记录已清理。
 
 ## 目标与边界
 

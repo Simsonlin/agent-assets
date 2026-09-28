@@ -40,7 +40,7 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "skills/grill-me",
       "entrypoint": "SKILL.md",
@@ -54,7 +54,7 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "skills/grilling",
       "entrypoint": "SKILL.md",
@@ -68,7 +68,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "skills/spec-execution",
       "entrypoint": "SKILL.md",
@@ -82,7 +82,7 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "skills/wait-what",
       "entrypoint": "SKILL.md",
@@ -96,7 +96,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/ask-matt",
       "entrypoint": "SKILL.md",
@@ -110,7 +110,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/code-review",
       "entrypoint": "SKILL.md",
@@ -124,7 +124,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/codebase-design",
       "entrypoint": "SKILL.md",
@@ -138,7 +138,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/diagnosing-bugs",
       "entrypoint": "SKILL.md",
@@ -152,7 +152,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/domain-modeling",
       "entrypoint": "SKILL.md",
@@ -166,7 +166,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/grill-with-docs",
       "entrypoint": "SKILL.md",
@@ -183,7 +183,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/implement",
       "entrypoint": "SKILL.md",
@@ -200,7 +200,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/improve-codebase-architecture",
       "entrypoint": "SKILL.md",
@@ -218,7 +218,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/prototype",
       "entrypoint": "SKILL.md",
@@ -232,7 +232,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/research",
       "entrypoint": "SKILL.md",
@@ -246,7 +246,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/setup-matt-pocock-skills",
       "entrypoint": "SKILL.md",
@@ -260,7 +260,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/tdd",
       "entrypoint": "SKILL.md",
@@ -276,7 +276,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/to-spec",
       "entrypoint": "SKILL.md",
@@ -290,7 +290,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/to-tickets",
       "entrypoint": "SKILL.md",
@@ -304,7 +304,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/engineering/wayfinder",
       "entrypoint": "SKILL.md",
@@ -323,7 +323,7 @@
       "domains": [
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/productivity/grilling",
       "entrypoint": "SKILL.md",
@@ -337,7 +337,7 @@
       "domains": [
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "matt",
       "path": "staging/matt/upstream/skills/productivity/handoff",
       "entrypoint": "SKILL.md",
@@ -351,7 +351,7 @@
       "domains": [
         "engineering"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "adaptive-sdd-standard",
       "entrypoint": "README.md",
@@ -365,24 +365,10 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "workflows",
       "entrypoint": "intake.md",
-      "dependencies": [],
-      "dependency_review": "reviewed"
-    },
-    {
-      "id": "personal/asset-trial",
-      "name": "asset-trial",
-      "kind": "workflow",
-      "domains": [
-        "general"
-      ],
-      "state": "testing",
-      "source": "personal",
-      "path": "workflows",
-      "entrypoint": "trial.md",
       "dependencies": [],
       "dependency_review": "reviewed"
     },
@@ -393,7 +379,7 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "workflows",
       "entrypoint": "adoption.md",
@@ -407,7 +393,7 @@
       "domains": [
         "general"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "personal",
       "path": "scripts",
       "entrypoint": "assets.py",
@@ -421,7 +407,7 @@
       "domains": [
         "research"
       ],
-      "state": "testing",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/key-assumptions-check",
       "entrypoint": "SKILL.md",
@@ -435,7 +421,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/analysis-of-competing-hypotheses",
       "entrypoint": "SKILL.md",
@@ -451,7 +437,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/quality-of-information-check",
       "entrypoint": "SKILL.md",
@@ -470,7 +456,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/decompose-research-question",
       "entrypoint": "SKILL.md",
@@ -484,7 +470,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/rate-source-admiralty",
       "entrypoint": "SKILL.md",
@@ -500,7 +486,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/sift-source-check",
       "entrypoint": "SKILL.md",
@@ -514,7 +500,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/estimative-language",
       "entrypoint": "SKILL.md",
@@ -528,7 +514,7 @@
       "domains": [
         "research"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "structured",
       "path": "staging/structured/upstream/skills/triangulate-sources",
       "entrypoint": "SKILL.md",
@@ -546,7 +532,7 @@
         "research",
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "latticework",
       "path": "staging/latticework/upstream/plugins/latticework/skills/scqa-pyramid",
       "entrypoint": "SKILL.md",
@@ -565,7 +551,7 @@
         "research",
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "latticework",
       "path": "staging/latticework/upstream/plugins/latticework/skills/strategy-kernel",
       "entrypoint": "SKILL.md",
@@ -584,7 +570,7 @@
         "research",
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "latticework",
       "path": "staging/latticework/upstream/plugins/latticework/skills/tosca-problem-definition",
       "entrypoint": "SKILL.md",
@@ -603,7 +589,7 @@
         "research",
         "general"
       ],
-      "state": "staged",
+      "state": "available",
       "source": "latticework",
       "path": "staging/latticework/upstream/plugins/latticework/skills/key-assumptions-check",
       "entrypoint": "SKILL.md",

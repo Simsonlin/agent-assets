@@ -1,13 +1,7 @@
-# Codex 试用适配
+# Codex 项目技能
 
-prepare 把临时完整目录放到目标项目 `.agents/skills/<trial-name>/`。保留 agents/openai.yaml、显式调用策略与支持文件；调用名和所选内部引用的调整记录在 manifest 中。
+`enable --harness codex` 将选中的完整 Skill 与必需依赖放到目标项目 `.agents/skills/<source>-<name>/`。项目可用 Git 跟踪这些副本；`AGENTS.md` 说明在什么任务中使用。保留支持文件和 `agents/openai.yaml` 的调用策略，来源版本与稳定名称见预览结果。不同内容的现有目录不会被覆盖。
 
-通过 `$<trial-name>` 或宿主 Skill 选择器调用，核对实际文件路径。会话未刷新时在目标项目新建会话并使用生成的 PROMPT.md；不要在资产仓库运行产品任务。临时名称避免依赖同名优先级，但不承诺隐藏用户级或系统能力。
+Codex 会从项目目录发现 Skill；可以按宿主支持的方式显式选择。新文件在现有会话中未出现时，重新打开项目会话。文件在目录中只证明可供发现，不能证明该次任务实际调用了它。
 
-验证层次分别记录：文件一致、目录发现、精确正文加载、遵循方法的结果。当前主 Agent 直接读文件可以作行为试用，但不能冒充宿主的原生发现/调用。
-
-本机于 2026-09-07 有两个不同入口：npm 安装的 `codex` 报平台二进制缺失；桌面应用随附的 `/Applications/ChatGPT.app/Contents/Resources/codex` 版本为 0.153.4，可以运行 `exec`。先核对实际入口，不为试用自动重装。应用路径是本机发现结果，其他机器应重新定位。
-
-本次只读试用使用 `exec --sandbox read-only --ephemeral --json -C <project> -o <report> -`，从标准输入传入试用任务，沿用已有模型配置。首次调用遇到账户用量限制；等待自然恢复后，在用户明确授权限定材料范围的情况下重试。仅保存必要的可观察执行证据和报告，不保存完整事件流或隐藏推理。
-
-[官方说明](https://learn.chatgpt.com/docs/build-skills)确认项目和用户发现位置、同名条目不自动合并、调用元数据及本地配置停用方式。试用撤销使用仓库工具，不改用户级配置。
+[官方说明](https://learn.chatgpt.com/docs/build-skills)介绍项目和用户发现位置、同名条目及调用元数据。项目副本使用来源前缀，避免同名混淆；用户级技能仍可能同时可用。
