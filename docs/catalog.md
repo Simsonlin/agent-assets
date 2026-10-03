@@ -12,14 +12,23 @@
 
 `sources[].checksums` 对整个选集固定副本进行校验。个人源码使用工作区版本；项目 Git 记录启用副本。校验和发生变化时，先判断来源更新还是个人特化，不重算旧基线来抹掉差异。
 
+## 与学习主题的关系
+
+[学习主题](../learning/README.md) 用稳定资产 ID、源码入口和用途建立关联，不另行登记资产身份、当前版本或状态。实践记录保留当时实际使用的版本，供回查；它不替代 catalog 的当前登记。一个主题可以引用多个资产，同一资产可以被多个主题引用。
+
+主题本身不作为资产登记；提炼出可复用工具或方法后，才按资产规则登记其唯一源码位置。资产正文和 catalog 不反向维护具体主题列表，项目启用也不需要复制主题材料。
+
 ## 个人资产
 
+- [explain-for-understanding](../skills/explain-for-understanding/SKILL.md)：跨领域讲解、材料澄清与工作结果核查；首版待目标项目实践。
 - [grilling](../skills/grilling/SKILL.md)
 - [grill-me](../skills/grill-me/SKILL.md)
 - [wait-what](../skills/wait-what/SKILL.md)
 - [spec-execution](../skills/spec-execution/SKILL.md)
 
-这四项已有个人使用，但没有据此自动变成 adopted。Adaptive SDD 作为 standard 登记，按其采用指南使用，不能当成 Skill 目录安装。
+后四项已有个人使用，但没有据此自动变成 adopted。自写 Skill 的完整源码放在 `skills/`，登记为 available 即可按需选用；目录位置不代表成熟度或正式纳入。设计依据与实践反馈可由相关学习主题记录，资产仍可独立运行。
+
+Adaptive SDD 作为 standard 登记，按其采用指南使用，不能当成 Skill 目录安装。
 
 ## 正式纳入与物理目录
 

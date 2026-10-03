@@ -34,6 +34,20 @@
   ],
   "assets": [
     {
+      "id": "personal/explain-for-understanding",
+      "name": "explain-for-understanding",
+      "kind": "skill",
+      "domains": [
+        "general"
+      ],
+      "state": "available",
+      "source": "personal",
+      "path": "skills/explain-for-understanding",
+      "entrypoint": "SKILL.md",
+      "dependencies": [],
+      "dependency_review": "reviewed"
+    },
+    {
       "id": "personal/grill-me",
       "name": "grill-me",
       "kind": "skill",
